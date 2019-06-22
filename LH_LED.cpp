@@ -12,10 +12,8 @@
 //		LED::LED(pin numer)
 //
 // ----------------------------------------
-LED::LED(uint8_t pin_nr, uint16_t t_on = 25, uint16_t t_off = 225)
+LED::LED(uint8_t pin_nr)
 :	pin_nr_(pin_nr)
-,	t_on_(t_on)
-,	t_off_(t_off)
 {
 	
 	pinMode(pin_nr_, OUTPUT);
@@ -31,7 +29,7 @@ LED::LED(uint8_t pin_nr, uint16_t t_on = 25, uint16_t t_off = 225)
 // ----------------------------------------
 void LED::on(){
 	
-	digitalWrite(pin_nr_, HIGH);
+	digitalWrite(pin_nr_, LOW);
 	
 }//end of LED::on
 
@@ -43,7 +41,7 @@ void LED::on(){
 // ----------------------------------------
 void LED::off(){
 	
-	digitalWrite(pin_nr_, LOW);
+	digitalWrite(pin_nr_, HIGH);
 	
 }//end of LED::off
 
@@ -53,13 +51,13 @@ void LED::off(){
 //		LED::ping(liczba pulsów)
 //
 // ----------------------------------------
-void LED::ping(uint8_t count){
+void LED::ping(uint8_t count, uint16_t t_on = 25, uint16_t t_off = 225){
 	
 	for(uint8_t i = 0; i < count; i++){
 		on();
-		delay(t_on_);
+		delay(t_on);
 		off();
-		delay(t_off_);
+		delay(t_off);
 	}
 	
 }//end off LED::ping

@@ -14,15 +14,13 @@
 class LED{
 	
 	public:
-		LED(uint8_t pin_nr, uint16_t t_on = 25, uint16_t t_off = 225);
+		LED(uint8_t pin_nr);
 		void on();
 		void off();
-		void ping(uint8_t count);
+		void ping(uint8_t count, uint16_t t_on = 25, uint16_t t_off = 225);
 		
 	private:
 		uint8_t pin_nr_;
-		uint16_t t_on_;
-		uint16_t t_off_;
 		
 };//end of class LED
 
