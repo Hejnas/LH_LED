@@ -1,8 +1,10 @@
 /*
-
-		LH LED
-
-*/
+ * 
+ * 		LH_LED.cpp
+ * 		author: Łukasz Hejna
+ * 		07.2019r.
+ *  
+ */
 
 #include "LH_LED.h"
 

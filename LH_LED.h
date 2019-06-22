@@ -1,10 +1,10 @@
-//
-//
-//		
-//
-//
-//
-//
+/*
+ * 
+ * 		LH_LED.h
+ * 		author: Łukasz Hejna
+ * 		07.2019r.
+ *  
+ */
 
 #ifndef LH_LED_h
 #define LH_LED_h
